@@ -18,7 +18,8 @@
     "paths": {
       "@components/*": ["src/common/components/*"],
       "@hooks/*": ["src/common/components/*"],
-      "@icons": ["src/common/icons"]
+      "@icons": ["src/common/icons"],
+      "@styles": ["src/styles/stitches.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

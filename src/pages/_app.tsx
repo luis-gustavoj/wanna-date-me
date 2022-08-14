@@ -1,7 +1,12 @@
 import type { AppProps } from 'next/app';
 
+import { globalStyles } from '../styles/stitches';
+
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+  <>
+    {globalStyles()}
+    <Component {...pageProps} />
+  </>
 );
 
 export default MyApp;
