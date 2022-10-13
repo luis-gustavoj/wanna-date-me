@@ -10,6 +10,14 @@ export const { styled, css } = createStitches({
     },
   },
   utils: {
+    px: (value: string | number) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: string | number) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
     mx: (value: string | number) => ({
       marginLeft: value,
       marginRight: value,
@@ -18,18 +26,12 @@ export const { styled, css } = createStitches({
       marginTop: value,
       marginBottom: value,
     }),
-    px: (value: string | number) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    py: (value: string | number) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
   },
 });
 
 export const globalStyles = globalCss({
+  '@import':
+    "url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap')",
   '*': {
     boxSizing: 'border-box',
     margin: 0,
@@ -37,6 +39,7 @@ export const globalStyles = globalCss({
   },
   'html, body': {
     height: '100%',
+    fontFamily: 'Poppins, sans-serif',
   },
   'img, picture, video, canvas, svg': {
     display: 'block',
